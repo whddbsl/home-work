@@ -1,13 +1,23 @@
+/* dl,dt,dd reset CSS */
+dl,
+dt,
+dd {
+  list-style-type: none; 
+  margin: 0;
+}
+
+
 .box {
     width: 250px;
     height: 259px;
     background-color: #ccc;
     border-radius: 10px;
+    border: solid black 2px;
+    
 }
 
 h1 {
     padding-left: 16px;
-    padding-top: 16px;
     line-height: 22.5px;
     font-size: 15px;
 }
@@ -19,7 +29,7 @@ h1 {
 
 .box__title1 {
     line-height: 21px;
-    margin-left: 90px;
+    margin-left: 92px;
     color: #296897;
     font-size: 14px;
     font-weight: 700;
@@ -29,7 +39,7 @@ h1 {
     width: 142px;
     height: 88px;
     line-height: 21px;
-    margin-left: 90px;
+    margin-left: 92px;
     font-size: 14px;
 }
 
@@ -39,7 +49,7 @@ h1 {
 }
 
 .box__title2 {
-    line-height: 30px;
+    line-height: 21px;
     margin-left: 16px;
     color: #296897;
     font-size: 14px;
@@ -47,11 +57,9 @@ h1 {
 }
 
 .box__description2 {
-    float: left;
     width: 142px;
-    height: 63px;
+    height: 88px;
     line-height: 21px;
-    margin-top: -45px;
     margin-left: 16px;
     font-size: 14px;
 }
