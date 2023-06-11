@@ -1,0 +1,91 @@
+@import url(/base.css);
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Pretendard-Regular';
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.margin__box {
+    width: 180px;
+    height: 80px;
+    background: linear-gradient(180deg, #CCCCCC 0%, #EEEEEE 100%);
+    padding: 8px 12px 12px 12px;
+    border: 1px solid #A3A3A3;
+    border-radius: 0 0 5px 5px;
+    transition: height 300ms;
+    transition-timing-function: cubic-bezier(0.12, 0, 0.39, 0);
+}
+
+.margin__box:hover{
+    height: 196px;
+    
+}
+
+.box {
+    width: 166px;
+    height: 176px;
+}
+
+.box__title {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22.5px;
+    margin-bottom: 8px;
+}
+
+span{
+    color: #ED552F;
+}
+
+.box__link {
+    background: white;
+    border: 1px solid #A3A3A3;
+    border-radius: 5px;
+    margin-right: 12px;
+    height: 29px;
+    overflow: hidden;
+    transition: height 300ms;
+    transition-timing-function: cubic-bezier(0.12, 0, 0.39, 0);
+}
+
+ul {
+    width: 166px;
+    height: 145px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0 0 0 24px;
+}
+
+.box__link:hover {
+    height: 145px;
+}
+
+
+li {
+    list-style: none;
+    height: 29px;
+    font-size: 14px;
+    line-height: 29px;
+    font-weight: 400;
+}
+
+/* @keyframes hoverEffect {
+    0%{
+
+    }
+    100%{
+        height: auto;
+    }
+} */
