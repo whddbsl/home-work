@@ -26,9 +26,8 @@ body {
     transition-timing-function: cubic-bezier(0.12, 0, 0.39, 0);
 }
 
-.margin__box:hover{
+.margin__box:hover {
     height: 196px;
-    
 }
 
 .box {
@@ -44,7 +43,7 @@ body {
     margin-bottom: 8px;
 }
 
-span{
+span {
     color: #ED552F;
 }
 
@@ -80,12 +79,3 @@ li {
     line-height: 29px;
     font-weight: 400;
 }
-
-/* @keyframes hoverEffect {
-    0%{
-
-    }
-    100%{
-        height: auto;
-    }
-} */
