@@ -58,6 +58,7 @@ body{
     font-weight: 400;
 }
 
+/* 랭킹 이미지 */
 
 .sprite
 {
@@ -65,23 +66,19 @@ body{
     list-style: none;
 }
 
-.spriteW3C{
+.spriteUp{
     background-position: right 3px 
 }
 
-.spriteWeb{
-    background-position: right -42px;
-}
-
-.spriteCSS{
+.spriteStay{
     background-position: right -19.5px;
 }
 
-.spriteMDN{
+.spriteDown{
     background-position: right -42px;
 }
 
-.sprite::before{
+.rank::before{
     content: "";
     color: white;
     background: #a3a3a3;
@@ -93,21 +90,25 @@ body{
     padding-left: 5px;
 }
 
-.spriteW3C::before{
+/* 랭킹 */
+
+.rank1::before{
     content: "1";
 }
 
-.spriteWeb::before{
+.rank2::before{
     content: "2";
 }
 
-.spriteCSS::before{
+.rank3::before{
     content: "3";
 }
 
-.spriteMDN::before{
+.rank4::before{
     content: "4";
 }
+
+/* 더보기 */
 
 .plus{
     position: absolute;
