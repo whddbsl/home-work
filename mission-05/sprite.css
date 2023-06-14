@@ -14,11 +14,11 @@
     font-family: 'Pretendard-Regular';
 }
 
-body{
+body {
     margin: 50px;
 }
 
-.site{
+.site {
     position: relative;
     width: 190px;
     background: linear-gradient(180deg, #CCCCCC 0%, #EEEEEE 100%);
@@ -27,27 +27,18 @@ body{
     padding: 12px;
 }
 
-.site__title{
+.site__title {
     font-size: 15px;
     line-height: 150%;
     font-weight: 700;
     margin-bottom: 8px;
 }
 
-.site__title span{
+.site__title span {
     color: #ed552f;
 }
 
-.site__more{
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    font-size: 14px;
-    line-height: 150%;
-    font-weight: 400;
-}
-
-.item__list{
+.item__list {
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -60,25 +51,25 @@ body{
 
 /* 랭킹 이미지 */
 
-.sprite
-{
+.sprite {
     background: url(rank.png) no-repeat;
     list-style: none;
 }
 
-.spriteUp{
-    background-position: right 3px 
+/* 원래 y축 좌표는 0, -22.5px, -45px인데  세로 가운데 정렬 위해 각각 +3.5px */
+.spriteUp {
+    background-position: right 3.5px
 }
 
-.spriteStay{
-    background-position: right -19.5px;
+.spriteStay {
+    background-position: right -19px;
 }
 
-.spriteDown{
-    background-position: right -42px;
+.spriteDown {
+    background-position: right -41.5px;
 }
 
-.rank::before{
+.rank::before {
     content: "";
     color: white;
     background: #a3a3a3;
@@ -92,28 +83,45 @@ body{
 
 /* 랭킹 */
 
-.rank1::before{
+.rank1::before {
     content: "1";
 }
 
-.rank2::before{
+.rank2::before {
     content: "2";
 }
 
-.rank3::before{
+.rank3::before {
     content: "3";
 }
 
-.rank4::before{
+.rank4::before {
     content: "4";
+}
+
+/* 링크 */
+
+.link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
 }
 
 /* 더보기 */
 
-.plus{
+.plus {
     position: absolute;
     font-size: 30px;
     color: green;
     right: 40px;
     top: -3px;
+}
+
+.site__more {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 400;
 }
