@@ -86,29 +86,6 @@ body {
     padding-left: 5px;
 }
 
-/* 랭킹 */
-
-/* .rank1::before {
-    counter-increment: numbering;
-    content: counter(numbering);
-}
-
-.rank2::before {
-    counter-increment: numbering;
-    content: counter(numbering);
-}
-
-.rank3::before {
-    counter-increment: numbering;
-    content: counter(numbering);
-}
-
-.rank4::before {
-    counter-increment: numbering;
-    content: counter(numbering);
-} */
-
-
 /* 링크 */
 
 .link {

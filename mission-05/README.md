@@ -36,7 +36,7 @@
 4. 랭킹 이미지가 sprite 형식이므로 각 리스트에 `sprite` 클래스를 주고 공통 속성을 먼저 줬습니다
 5. 리스트별 알맞는 이미지를 주기 위해 `background-position`을 이용했습니다. 리스트 가장 우측에 이미지를 배치하기 위해 x좌표는 `right`를 주고 y좌표는 각 이미지별 알맞는 좌표를 줬습니다.
 6. 리스트 앞에 순위를 주기 위하여 먼저 `sprite` 클래스에 `before 가상요소`를 부여하여 회색 배경을 만들어 주었습니다.
-7. 그 후, 각 리스트별 랭킹에 맞는 숫자를 `content`에 줬습니다.
+7. 리스트 순서를 자동으로 써주기 위해 부모 요소에 `counter-reset`, 자식 요소인 리스트에 `counter-increment`, `content: counter(numbering)`을 주었습니다
 
 ### CSS 코드
 ``` css
@@ -56,11 +56,11 @@
     font-family: 'Pretendard-Regular';
 }
 
-body{
+body {
     margin: 50px;
 }
 
-.site{
+.site {
     position: relative;
     width: 190px;
     background: linear-gradient(180deg, #CCCCCC 0%, #EEEEEE 100%);
@@ -69,27 +69,18 @@ body{
     padding: 12px;
 }
 
-.site__title{
+.site__title {
     font-size: 15px;
     line-height: 150%;
     font-weight: 700;
     margin-bottom: 8px;
 }
 
-.site__title span{
+.site__title span {
     color: #ed552f;
 }
 
-.site__more{
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    font-size: 14px;
-    line-height: 150%;
-    font-weight: 400;
-}
-
-.item__list{
+.item__list {
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -98,33 +89,35 @@ body{
     line-height: 150%;
     font-size: 11px;
     font-weight: 400;
+    /* 랭킹 자동으로 */
+    counter-reset: numbering;
 }
 
+/* 랭킹 이미지 */
 
-.sprite
-{
+.sprite {
     background: url(rank.png) no-repeat;
     list-style: none;
+    background-position-x: right;
 }
 
-.spriteW3C{
-    background-position: right 3px 
+/* 원래 y축 좌표는 0, -22.5px, -45px인데  세로 가운데 정렬 위해 각각 +3.5px */
+.spriteUp {
+    background-position-y: 3.5px
 }
 
-.spriteWeb{
-    background-position: right -42px;
+.spriteStay {
+    background-position-y: -19px;
 }
 
-.spriteCSS{
-    background-position: right -19.5px;
+.spriteDown {
+    background-position-y: -41.5px;
 }
 
-.spriteMDN{
-    background-position: right -42px;
-}
-
-.sprite::before{
-    content: "";
+.rank::before {
+    /* 랭킹 자동으로 */
+    counter-increment: numbering;
+    content: counter(numbering);
     color: white;
     background: #a3a3a3;
     border-radius: 5px;
@@ -135,27 +128,29 @@ body{
     padding-left: 5px;
 }
 
-.spriteW3C::before{
-    content: "1";
+/* 링크 */
+
+.link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
 }
 
-.spriteWeb::before{
-    content: "2";
-}
+/* 더보기 */
 
-.spriteCSS::before{
-    content: "3";
-}
-
-.spriteMDN::before{
-    content: "4";
-}
-
-.plus{
+.plus {
     position: absolute;
     font-size: 30px;
     color: green;
     right: 40px;
     top: -3px;
+}
+
+.site__more {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 14px;
+    line-height: 150%;
 }
 ```
