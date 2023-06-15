@@ -47,6 +47,8 @@ body {
     line-height: 150%;
     font-size: 11px;
     font-weight: 400;
+    /* 랭킹 자동으로 */
+    counter-reset: numbering;
 }
 
 /* 랭킹 이미지 */
@@ -54,23 +56,26 @@ body {
 .sprite {
     background: url(rank.png) no-repeat;
     list-style: none;
+    background-position-x: right;
 }
 
 /* 원래 y축 좌표는 0, -22.5px, -45px인데  세로 가운데 정렬 위해 각각 +3.5px */
 .spriteUp {
-    background-position: right 3.5px
+    background-position-y: 3.5px
 }
 
 .spriteStay {
-    background-position: right -19px;
+    background-position-y: -19px;
 }
 
 .spriteDown {
-    background-position: right -41.5px;
+    background-position-y: -41.5px;
 }
 
 .rank::before {
-    content: "";
+    /* 랭킹 자동으로 */
+    counter-increment: numbering;
+    content: counter(numbering);
     color: white;
     background: #a3a3a3;
     border-radius: 5px;
@@ -83,21 +88,26 @@ body {
 
 /* 랭킹 */
 
-.rank1::before {
-    content: "1";
+/* .rank1::before {
+    counter-increment: numbering;
+    content: counter(numbering);
 }
 
 .rank2::before {
-    content: "2";
+    counter-increment: numbering;
+    content: counter(numbering);
 }
 
 .rank3::before {
-    content: "3";
+    counter-increment: numbering;
+    content: counter(numbering);
 }
 
 .rank4::before {
-    content: "4";
-}
+    counter-increment: numbering;
+    content: counter(numbering);
+} */
+
 
 /* 링크 */
 
@@ -123,5 +133,4 @@ body {
     right: 12px;
     font-size: 14px;
     line-height: 150%;
-    font-weight: 400;
 }
